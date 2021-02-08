@@ -8,5 +8,6 @@ namespace UniversalConverter.Logic
 {
     class Converter
     {
+        int a = 4;
     }
 }
