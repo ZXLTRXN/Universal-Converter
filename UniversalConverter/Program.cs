@@ -11,12 +11,16 @@ namespace UniversalConverter
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
-        [STAThread]
+        /// 
+        //[STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            /*            Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new Form1());*/
+
+            Console.WriteLine(UniversalConverter.Logic.Conver_10_P.Do(-362.384,7, 7));
+            Console.ReadLine();
         }
     }
 }

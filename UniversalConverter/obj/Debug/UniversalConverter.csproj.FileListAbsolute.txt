@@ -1,0 +1,9 @@
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\bin\Debug\UniversalConverter.exe.config
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\bin\Debug\UniversalConverter.exe
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\bin\Debug\UniversalConverter.pdb
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.csprojAssemblyReference.cache
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.Properties.Resources.resources
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.csproj.GenerateResource.cache
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.csproj.CoreCompileInputs.cache
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.exe
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.pdb
