@@ -19,7 +19,7 @@ namespace UniversalConverter
                         Application.SetCompatibleTextRenderingDefault(false);
                         Application.Run(new Form1());*/
 
-            Console.WriteLine(UniversalConverter.Logic.Conver_10_P.Do(-362.384,7, 7));
+            Console.WriteLine(Logic.Conver_10_P.Do(18.835,8, 4));
             Console.ReadLine();
         }
     }

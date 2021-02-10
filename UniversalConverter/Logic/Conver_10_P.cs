@@ -82,7 +82,11 @@ namespace UniversalConverter.Logic
             {
                 result = "-";
             }
- 
+            
+            if(temp==0)
+            {
+                result += '0';
+            }
                
             while(temp != 0)
             {
@@ -114,8 +118,12 @@ namespace UniversalConverter.Logic
             double temp = System.Math.Abs(n);
             double mult;
             String result = "";
+            if (temp == 0)
+            {
+                result += '0';
+            }
 
-            while(c != 0 && temp % 1 != 0.0)
+            while (c != 0 && temp % 1 != 0.0)
             {
                 mult = temp * p;
                 try 
