@@ -8,7 +8,9 @@ namespace UniversalConverter.Logic
 {
     static class Const
     {
-        public static Char Sep = ',';
-        public static double EPS = 1e-10;
+        public const Char Sep = ',';
+        public const Char zero = '0';
+        public const double EPS = 1e-10;
+
     }
 }

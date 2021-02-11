@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace UniversalConverter.Logic
 {
-    class Conver_P_10
+    abstract class Conver_P_10
     {
         //Преобразовать цифру в число.
-        static double char_To_num(char ch) 
+        public static double char_To_num(char ch) 
         {
             switch (ch)
             {

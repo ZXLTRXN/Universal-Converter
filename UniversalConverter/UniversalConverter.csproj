@@ -58,6 +58,8 @@
     <Compile Include="Logic\Const.cs" />
     <Compile Include="Logic\Conver_10_P.cs" />
     <Compile Include="Logic\Conver_P_10.cs" />
+    <Compile Include="Logic\Editor.cs" />
+    <Compile Include="Logic\History.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
