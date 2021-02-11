@@ -18,8 +18,11 @@ namespace UniversalConverter
             /*            Application.EnableVisualStyles();
                         Application.SetCompatibleTextRenderingDefault(false);
                         Application.Run(new Form1());*/
-
-            Console.WriteLine(Logic.Conver_10_P.Do(18.835,8, 4));
+            int SS = 5;
+            int acc = 7;
+            string Str = Logic.Conver_10_P.Do(0.36, SS, acc);
+            Console.WriteLine(Str);
+            Console.WriteLine(Logic.Conver_P_10.Do(Str, SS, acc));
             Console.ReadLine();
         }
     }

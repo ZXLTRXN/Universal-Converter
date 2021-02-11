@@ -55,6 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Const.cs" />
     <Compile Include="Logic\Conver_10_P.cs" />
     <Compile Include="Logic\Conver_P_10.cs" />
     <Compile Include="Program.cs" />

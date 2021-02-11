@@ -70,20 +70,38 @@ namespace UniversalConverter.Logic
 
 
 
-/*        //Преобразовать строку в число
-        private static double convert(string P_num, int P, double weight) 
+        // вычисляет количество цифр до запятой.
+        private static int find_weight(string P_num)
         {
+            int result = 0;
+            foreach (char c in P_num)
+            {
+                if (c != Logic.Const.Sep) result++;
+                else break;
+            }
+            return result;
+            }
 
+
+
+        //Преобразовать строку
+        //в с.с. p в десятичное число с точностью с знаков.
+        public static double Do(string P_num, int P, int c)
+        {
+            double result=0.0;
+            int weight = find_weight(P_num)-1;
+            foreach (char ch in P_num)
+            {
+                if(ch != Logic.Const.Sep)
+                {
+                    result += char_To_num(ch) * Math.Pow(P, weight);
+                    weight--;
+                }     
+            }
+            result = Math.Round(result, c);
+            return result;
         }
 
-
-
-        //Преобразовать из с.с. с основанием р 
-        //в с.с. с основанием 10.
-        public static double dval(string P_num, int P) 
-        {
-
-        }*/
     }
 
 }

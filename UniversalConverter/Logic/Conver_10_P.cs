@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace UniversalConverter.Logic
 {
-    class Conver_10_P
+    abstract class Conver_10_P
     {
         //Преобразовать целое в символ.
         public static char int_to_Char(int n) 
-        { 
-            
+        {   
             switch(n)
             {
                 case 0:
@@ -123,9 +122,11 @@ namespace UniversalConverter.Logic
                 result += '0';
             }
 
-            while (c != 0 && temp % 1 != 0.0)
+            while (c != 0 && temp % 1 > Logic.Const.EPS)
             {
                 mult = temp * p;
+                mult = Math.Round(mult, 10);
+
                 try 
                 { 
                     result += int_to_Char((int)mult);
@@ -143,13 +144,13 @@ namespace UniversalConverter.Logic
 
 
 
-        //Преобразовать десятичное 
-        //действительное число в с.с. с основанием р.
+        //Преобразовать десятичное действительное число
+        //в с.с. с основанием р и точностью с знаков.
         public static string Do(double n, int p, int c)
         {
             String v1 = int_to_P((int)n, p);
             String v2 = flt_to_P(n%1, p, c);
-            return v1 +"."+ v2;
+            return v1 + Logic.Const.Sep + v2;
 
         }
     }
