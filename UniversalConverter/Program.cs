@@ -18,9 +18,9 @@ namespace UniversalConverter
             /*            Application.EnableVisualStyles();
                         Application.SetCompatibleTextRenderingDefault(false);
                         Application.Run(new Form1());*/
-            int SS = 5;
-            int acc = 9;
-            string Str = Logic.Conver_10_P.Do(0.36, SS, acc);
+            int SS = 8;
+            int acc = 8;
+            string Str = Logic.Conver_10_P.Do(0.8902, SS, acc);
             Console.WriteLine(Str);
             Console.WriteLine(Logic.Conver_P_10.Do(Str, SS, acc));
             Console.ReadLine();

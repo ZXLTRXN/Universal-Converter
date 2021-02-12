@@ -76,7 +76,7 @@ namespace UniversalConverter.Logic
             int result = 0;
             foreach (char c in P_num)
             {
-                if (c != Logic.Const.Sep) result++;
+                if (c != Const.Sep) result++;
                 else break;
             }
             return result;
@@ -92,7 +92,7 @@ namespace UniversalConverter.Logic
             int weight = find_weight(P_num)-1;
             foreach (char ch in P_num)
             {
-                if(ch != Logic.Const.Sep)
+                if(ch != Const.Sep)
                 {
                     result += char_To_num(ch) * Math.Pow(P, weight);
                     weight--;

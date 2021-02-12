@@ -122,7 +122,7 @@ namespace UniversalConverter.Logic
                 result += '0';
             }
 
-            while (c != 0 && temp % 1 > Logic.Const.EPS)
+            while (c != 0 && temp % 1 > Const.EPS)
             {
                 mult = temp * p;
                 mult = Math.Round(mult, 10);
@@ -150,7 +150,7 @@ namespace UniversalConverter.Logic
         {
             String v1 = int_to_P((int)n, p);
             String v2 = flt_to_P(n%1, p, c);
-            return v1 + Logic.Const.Sep + v2;
+            return v1 + Const.Sep + v2;
 
         }
     }
