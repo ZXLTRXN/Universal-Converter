@@ -69,10 +69,10 @@ namespace UniversalConverter.Logic
 
 
         //Выполнить команду редактирования.
-        /*        public string DoEdit(int j)
-                {
-
-                }*/
+        public string DoEdit(int j)
+        {
+            return "12345678";///////////////////////////////////////hardcoded
+        }
 
     }
 
