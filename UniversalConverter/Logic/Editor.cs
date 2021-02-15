@@ -23,6 +23,7 @@ namespace UniversalConverter.Logic
 
             String temp = number;
             temp += Conver_10_P.int_to_Char(n);
+            number = temp;
             return temp;
         }
 
@@ -37,15 +38,17 @@ namespace UniversalConverter.Logic
         {
             String temp = number;
             temp += '0';
+            number = temp;
             return temp;
         }
 
 
         //Добавить разделитель.
-        public string AddDelim()
+        public string AddSep()
         {
             String temp = number;
             temp += Const.Sep;
+            number = temp;
             return temp;
         }
 
@@ -53,9 +56,16 @@ namespace UniversalConverter.Logic
         //Удалить символ справа.
         public string Bs()
         {
-            String temp = number;
-            temp.Remove(temp.Length - 1);
-            return temp;
+            if (number.Length != 0)
+            {
+                String temp = number;
+                temp = temp.Remove(temp.Length - 1);
+                number = temp;
+                return temp;
+            }
+            else
+                return "";
+            
         }
 
 
@@ -64,6 +74,7 @@ namespace UniversalConverter.Logic
         {
 
             String temp = "";
+            number = temp;
             return temp;
         }
 
@@ -71,7 +82,14 @@ namespace UniversalConverter.Logic
         //Выполнить команду редактирования.
         public string DoEdit(int j)
         {
-            return "12345678";///////////////////////////////////////hardcoded
+
+                if (j <= 15 && j>-1) return AddDigit(j);
+                if (j == 16) return AddSep();
+                if (j == 17) return Bs();
+                if (j == 18) return Clear();   
+                return Number;
+            
+            
         }
 
     }

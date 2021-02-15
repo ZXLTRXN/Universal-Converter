@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversalConverter.Logic
 {
-    abstract class Control_
+    class Control_
     {
         public History his = new History();
         public enum State { In_progress, Done }
@@ -57,4 +57,4 @@ namespace UniversalConverter.Logic
 
 
 }
-}
+

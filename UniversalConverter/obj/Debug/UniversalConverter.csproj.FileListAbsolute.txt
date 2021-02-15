@@ -7,3 +7,4 @@ c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\De
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.csproj.CoreCompileInputs.cache
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.exe
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.pdb
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.AppForm.resources
