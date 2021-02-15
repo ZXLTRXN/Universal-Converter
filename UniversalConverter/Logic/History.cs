@@ -13,7 +13,7 @@ namespace UniversalConverter.Logic
         int p2;
         string number1;
         string number2;
-        public Record(int p1, int p2, string n1, string n2) 
+        public Record(int p1, int p2, string n1, string n2)
         {
             this.p1 = p1;
             this.p2 = p2;
@@ -21,7 +21,7 @@ namespace UniversalConverter.Logic
             this.number2 = n2;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
             return String.Format("{0}({1}) <=> {2}({3})", number1, p1, number2, p2);
         }
@@ -38,21 +38,23 @@ namespace UniversalConverter.Logic
 
         public Record GetRecord(int i)
         {
-           return L[i];  
+            if (i < L.Count && i >= 0)
+                return L[i];
+            else return new Record();
         }
 
-        public void AddRecord(int p1, int p2, string n1, string n2) 
+        public void AddRecord(int p1, int p2, string n1, string n2)
         {
             Record newRecord = new Record(p1, p2, n1, n2);
             L.Add(newRecord);
         }
 
-        public void Clear() 
+        public void Clear()
         {
             L.Clear();
         }
 
-        public int Count() 
+        public int Count()
         {
             return L.Count;
         }

@@ -8,3 +8,5 @@ c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\De
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.exe
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.pdb
 c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.AppForm.resources
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.ReferenceForm.resources
+c:\Users\Ilya Shevtsov\source\repos\UniversalConverter\UniversalConverter\obj\Debug\UniversalConverter.HistoryForm.resources

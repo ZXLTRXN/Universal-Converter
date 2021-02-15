@@ -12,7 +12,8 @@ namespace UniversalConverter
 {
     public partial class AppForm : Form
     {
-        Logic.Control_ ctl = new Logic.Control_();
+        Logic.Control_ ctl =  new Logic.Control_();
+
         public AppForm()
         {
             InitializeComponent();
@@ -105,7 +106,7 @@ namespace UniversalConverter
         }
         //////////////////
 
-        ///обработка кнопок
+        ///обработка всех кнопок
         private void button1_Click(object sender, EventArgs e)
         {
             //ссылка на компонент, на котором кликнули мышью
@@ -116,6 +117,18 @@ namespace UniversalConverter
 
         }
 
+        ///запуск других форм
+        private void историяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HistoryForm hisForm = new HistoryForm();
+            hisForm.Owner = this;
+            hisForm.Show();
+        }
 
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReferenceForm refForm = new ReferenceForm();
+            refForm.Show();
+        }
     }
 }
