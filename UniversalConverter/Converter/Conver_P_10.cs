@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversalConverter.Logic
+namespace UniversalConverter.Converter
 {
     abstract class Conver_P_10
     {

@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversalConverter.Logic
+namespace UniversalConverter.Converter
 {
+    //Структура для записи преобразования
     [Serializable]
     public struct Record
     {
@@ -31,9 +32,11 @@ namespace UniversalConverter.Logic
 
     public class History
     {
+
         BinaryFormatter formatter = new BinaryFormatter();
         List<Record> L;
 
+        //Чтение истории из файла
         public History()
         {
             
@@ -54,6 +57,7 @@ namespace UniversalConverter.Logic
 
         }
 
+        //Запись истории в файл
         ~History()
         {
             using (FileStream fs = new 
@@ -64,6 +68,7 @@ namespace UniversalConverter.Logic
             }
         }
 
+        //Геттер по индексу
         public Record GetRecord(int i)
         {
             if (i < L.Count && i >= 0)
@@ -71,17 +76,20 @@ namespace UniversalConverter.Logic
             else return new Record();
         }
 
+        //Добавление записи
         public void AddRecord(int p1, int p2, string n1, string n2)
         {
             Record newRecord = new Record(p1, p2, n1, n2);
             L.Add(newRecord);
         }
 
+        //Очитска Истории
         public void Clear()
         {
             L.Clear();
         }
 
+        
         public int Count()
         {
             return L.Count;

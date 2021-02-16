@@ -12,7 +12,7 @@ namespace UniversalConverter
 {
     public partial class AppForm : Form
     {
-        Logic.Control_ ctl =  new Logic.Control_();
+        Converter.Control_ ctl =  new Converter.Control_();
 
         public AppForm()
         {
@@ -40,7 +40,7 @@ namespace UniversalConverter
             if (j == 19) { label6.Text = ctl.DoCmnd(j); }
             else
             {
-                if (ctl.St == Logic.Control_.State.Done)
+                if (ctl.St == Converter.Control_.State.Done)
                 {
                     //очистить содержимое редактора 
                     label5.Text = ctl.DoCmnd(18);

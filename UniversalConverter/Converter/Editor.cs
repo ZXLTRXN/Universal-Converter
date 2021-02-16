@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversalConverter.Logic
+namespace UniversalConverter.Converter
 {
     class Editor
     {
@@ -78,7 +78,7 @@ namespace UniversalConverter.Logic
             return temp;
         }
 
-
+        //Вычислить длину строки
         public int Length()
         {
             return number.Length;

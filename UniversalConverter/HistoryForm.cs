@@ -12,13 +12,13 @@ namespace UniversalConverter
 {
     public partial class HistoryForm : Form
     {
-        Logic.History his;
+        Converter.History his;
         public HistoryForm()
         {
             InitializeComponent();
         }
 
-        public HistoryForm(Logic.History his)
+        public HistoryForm(Converter.History his)
         {
             InitializeComponent();
             this.his = his;
@@ -32,6 +32,15 @@ namespace UniversalConverter
         {
             his.Clear();
             listBox1.Items.Clear();
+        }
+
+        private void listBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control == true && e.KeyCode == Keys.C)
+            {
+                string s = listBox1.SelectedItem.ToString();
+                Clipboard.SetData(DataFormats.StringFormat, s);
+            }
         }
     }
 }

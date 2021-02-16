@@ -67,6 +67,7 @@ namespace UniversalConverter
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(295, 184);
             this.listBox1.TabIndex = 1;
+            this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             // 
             // button1
             // 

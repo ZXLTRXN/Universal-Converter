@@ -76,12 +76,12 @@
     <Compile Include="HistoryForm.Designer.cs">
       <DependentUpon>HistoryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Logic\Const.cs" />
-    <Compile Include="Logic\Control_.cs" />
-    <Compile Include="Logic\Conver_10_P.cs" />
-    <Compile Include="Logic\Conver_P_10.cs" />
-    <Compile Include="Logic\Editor.cs" />
-    <Compile Include="Logic\History.cs" />
+    <Compile Include="Converter\Const.cs" />
+    <Compile Include="Converter\Control_.cs" />
+    <Compile Include="Converter\Conver_10_P.cs" />
+    <Compile Include="Converter\Conver_P_10.cs" />
+    <Compile Include="Converter\Editor.cs" />
+    <Compile Include="Converter\History.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReferenceForm.cs">
