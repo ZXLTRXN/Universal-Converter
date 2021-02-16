@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,17 +25,43 @@ namespace UniversalConverter.Logic
 
         public override string ToString()
         {
-            return String.Format("{0}({1}) <=> {2}({3})", number1, p1, number2, p2);
+            return String.Format("{0} ({1}) <=> {2} ({3})", number1, p1, number2, p2);
         }
     }
 
-    class History
+    public class History
     {
+        BinaryFormatter formatter = new BinaryFormatter();
         List<Record> L;
 
         public History()
         {
-            L = new List<Record>();
+            
+            using (FileStream fs = new 
+                FileStream("c:/Users/Ilya Shevtsov/source/repos/UniversalConverter/UniversalConverter/Data/ConverterHistory.dat",
+                FileMode.OpenOrCreate))
+            {
+                try 
+                {
+                    L = (List<Record>)formatter.Deserialize(fs);
+                }
+                catch(Exception e)
+                {
+                    L = new List<Record>();
+                }
+                //formatter.Serialize(fs, L);
+            }
+
+        }
+
+        ~History()
+        {
+            using (FileStream fs = new 
+                FileStream("c:/Users/Ilya Shevtsov/source/repos/UniversalConverter/UniversalConverter/Data/ConverterHistory.dat",
+                FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, L);
+            }
         }
 
         public Record GetRecord(int i)

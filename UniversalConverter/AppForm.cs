@@ -45,9 +45,17 @@ namespace UniversalConverter
                     //очистить содержимое редактора 
                     label5.Text = ctl.DoCmnd(18);
                 }
-                //выполнить команду редактирования
-                label5.Text = ctl.DoCmnd(j);
-                label6.Text = "0";
+                //выполнить команду редактирования если не переполнение
+                if(ctl.ed.Length() < 16 || j > 16)
+                {
+                    label5.Text = ctl.DoCmnd(j);
+                    label6.Text = "0";
+                }
+                else
+                {
+                    MessageBox.Show("Достигнута максимальная длина", "Ошибка", MessageBoxButtons.OK);
+                }
+                
             }
         }
 
@@ -94,6 +102,7 @@ namespace UniversalConverter
         {
             TrackBar tb = (TrackBar)sender;
             label7.Text = String.Format("{0}", tb.Value);
+            label5.Text = ctl.DoCmnd(18);
             ctl.Pin = tb.Value;
             this.UpdateButtons();
         }
@@ -113,6 +122,7 @@ namespace UniversalConverter
             Button but = (Button)sender;
             //номер выбранной команды
             int j = Convert.ToInt16(but.Tag.ToString());
+            trackBar1.Select();
             DoCmnd(j);
 
         }
@@ -120,8 +130,7 @@ namespace UniversalConverter
         ///запуск других форм
         private void историяToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HistoryForm hisForm = new HistoryForm();
-            hisForm.Owner = this;
+            HistoryForm hisForm = new HistoryForm(ctl.his);
             hisForm.Show();
         }
 
@@ -130,5 +139,7 @@ namespace UniversalConverter
             ReferenceForm refForm = new ReferenceForm();
             refForm.Show();
         }
+
+
     }
 }

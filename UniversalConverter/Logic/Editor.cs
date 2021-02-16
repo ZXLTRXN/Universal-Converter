@@ -79,6 +79,11 @@ namespace UniversalConverter.Logic
         }
 
 
+        public int Length()
+        {
+            return number.Length;
+        }
+
         //Выполнить команду редактирования.
         public string DoEdit(int j)
         {

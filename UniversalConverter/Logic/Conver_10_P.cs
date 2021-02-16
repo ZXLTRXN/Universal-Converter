@@ -9,7 +9,7 @@ namespace UniversalConverter.Logic
     abstract class Conver_10_P
     {
         //Преобразовать целое в символ.
-        public static char int_to_Char(int n) 
+        public static char int_to_Char(long n) 
         {   
             switch(n)
             {
@@ -71,10 +71,10 @@ namespace UniversalConverter.Logic
 
 
         //Преобразовать десятичное целое в с.с. с основанием р.
-        public static string int_to_P(int n, int p) 
+        public static string int_to_P(long n, int p) 
         {
             String result = "";
-            int temp = System.Math.Abs(n);
+            long temp = System.Math.Abs(n);
             Stack<char> stack = new Stack<char>();
 
             if (n < 0)
@@ -148,7 +148,7 @@ namespace UniversalConverter.Logic
         //в с.с. с основанием р и точностью с знаков.
         public static string Do(double n, int p, int c)
         {
-            String v1 = int_to_P((int)n, p);
+            String v1 = int_to_P((long)n, p);
             String v2 = flt_to_P(n%1, p, c);
             return v1 + Const.Sep + v2;
 

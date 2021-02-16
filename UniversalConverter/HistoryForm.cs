@@ -12,21 +12,26 @@ namespace UniversalConverter
 {
     public partial class HistoryForm : Form
     {
+        Logic.History his;
         public HistoryForm()
         {
             InitializeComponent();
         }
 
-        private void HistoryForm_Load(object sender, EventArgs e)
+        public HistoryForm(Logic.History his)
         {
-            Logic.Control_ ctl = this.Owner.;
-            Logic.History his = ctl.his;
-            for (int i = 0; i < his.Count(); i++)
+            InitializeComponent();
+            this.his = his;
+            for (int i = 0; i < this.his.Count(); i++)
             {
-                listBox1.Items.Add(his.GetRecord(i).ToString());
+                listBox1.Items.Add(this.his.GetRecord(i).ToString());
             }
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            his.Clear();
+            listBox1.Items.Clear();
+        }
     }
 }
