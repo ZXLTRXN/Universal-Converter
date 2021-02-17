@@ -37,7 +37,11 @@ namespace UniversalConverter
 
         private void DoCmnd(int j)
         {
-            if (j == 19) { label6.Text = ctl.DoCmnd(j); }
+            if (j == 19) 
+            {
+                //label6.Text = ctl.DoCmnd(j);
+                textBox1.Text = ctl.DoCmnd(j);
+            }
             else
             {
                 if (ctl.St == Converter.Control_.State.Done)
@@ -49,7 +53,8 @@ namespace UniversalConverter
                 if(ctl.ed.Length() < 16 || j > 16)
                 {
                     label5.Text = ctl.DoCmnd(j);
-                    label6.Text = "0";
+                    //label6.Text = "0";
+                    textBox1.Text = "0";
                 }
                 else
                 {
@@ -140,6 +145,13 @@ namespace UniversalConverter
             refForm.Show();
         }
 
-
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control == true && e.KeyCode == Keys.C)
+            {
+                string s = textBox1.Text;
+                Clipboard.SetData(DataFormats.StringFormat, s);
+            }
+        }
     }
 }
