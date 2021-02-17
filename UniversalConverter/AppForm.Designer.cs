@@ -149,7 +149,7 @@ namespace UniversalConverter
             this.button20.TabIndex = 19;
             this.button20.TabStop = false;
             this.button20.Tag = "19";
-            this.button20.Text = "SOLVE";
+            this.button20.Text = "Execute";
             this.button20.UseVisualStyleBackColor = false;
             this.button20.Click += new System.EventHandler(this.button1_Click);
             // 

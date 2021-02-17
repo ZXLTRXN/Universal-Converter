@@ -42,8 +42,9 @@ namespace UniversalConverter
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(319, 55);
+            this.panel1.Size = new System.Drawing.Size(457, 68);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -51,8 +52,9 @@ namespace UniversalConverter
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 55);
+            this.label1.Size = new System.Drawing.Size(457, 68);
             this.label1.TabIndex = 0;
             this.label1.Text = "История";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,20 +63,24 @@ namespace UniversalConverter
             // 
             this.listBox1.BackColor = System.Drawing.Color.Azure;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 74);
+            this.listBox1.ItemHeight = 18;
+            this.listBox1.Location = new System.Drawing.Point(16, 91);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(295, 184);
+            this.listBox1.Size = new System.Drawing.Size(428, 272);
             this.listBox1.TabIndex = 1;
             this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(125, 264);
+            this.button1.Location = new System.Drawing.Point(178, 371);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Очистить";
             this.button1.UseVisualStyleBackColor = true;
@@ -82,13 +88,14 @@ namespace UniversalConverter
             // 
             // HistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(319, 299);
+            this.ClientSize = new System.Drawing.Size(457, 411);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "HistoryForm";
